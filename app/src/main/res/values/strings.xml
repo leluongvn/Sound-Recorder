@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recorder Sound</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_remove_list">Rename</string>
+    <string name="action_edit">Rename</string>
+    <string name="ad_id_banner">ca-app-pub-7744357389506091/6304093723</string>
+</resources>

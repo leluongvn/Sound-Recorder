@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_button"
+            android:layout_weight="0"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/play_main_big"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/play_icon_big"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/pause_main_big"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/pause_icon_big" />
+
+            <ImageButton
+                android:id="@+id/play_seek"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/play_icon_big"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textColor="#fff"
+                android:text="00:00:00"
+                android:layout_marginBottom="10dp"
+                android:textSize="40sp" />
+
+            <SeekBar
+                android:id="@+id/main_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chronometer"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:thumb="@drawable/thumb_sb"
+                android:progressDrawable="@drawable/seek_bar"
+                android:splitTrack="false"
+                android:thumbTint="@android:color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_seek_bar"
+                android:layout_centerHorizontal="true"
+                android:text="Tap Record"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/list_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_play_list"
+                    android:text="Record"></ImageButton>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/stop_recording"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:background="@drawable/round_button"
+                        app:srcCompat="@mipmap/ic_stop">
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/record"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:onClick="stop"
+                        android:background="@drawable/round_button"
+                        app:srcCompat="@mipmap/ic_record"></ImageButton>
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/cancel_recording"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/ic_cancel"
+                    android:clickable="true"
+                    android:onClick="play"></ImageButton>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+<!--    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/banner_AdView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_weight="0"-->
+<!--        ads:adSize="SMART_BANNER"-->
+<!--        ads:adUnitId="@string/ad_id_banner"></com.google.android.gms.ads.AdView>-->
+</RelativeLayout>
